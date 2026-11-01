@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referências Visuais do Portfólio — Pedro Henrique Correa Rovere</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Variáveis para Documento A4 / Editorial */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ink-primary: #0f1117;
+      --ink-secondary: #4a5268;
+      --ink-muted: #828ba0;
+      --border-color: #e2e5eb;
+      --accent-lime: #a3e635;
+      --accent-dark: #166534;
+      --bg-page: #ffffff;
+      --bg-subtle: #f8fafc;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: #eceff4;
+      color: var(--ink-primary);
+      line-height: 1.55;
+      padding: 2.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Barra de Ações (Apenas na tela) */
+    .print-actions-bar {
+      max-width: 860px;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .btn-print {
+      background: var(--ink-primary);
+      color: #ffffff;
+      border: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .btn-print:hover {
+      background: #252a36;
+    }
+
+    .btn-back {
+      color: var(--ink-secondary);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-back:hover {
+      color: var(--ink-primary);
+    }
+
+    /* Página Documento Estilo Monografia A4 */
+    .document-page {
+      background: var(--bg-page);
+      width: 100%;
+      max-width: 860px;
+      min-height: 1100px;
+      padding: 3.5rem 3.5rem;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+      border-radius: 4px;
+      position: relative;
+    }
+
+    /* Cabeçalho do Documento */
+    .doc-header {
+      border-bottom: 2px solid var(--ink-primary);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .doc-category-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-title {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--ink-primary);
+    }
+
+    .doc-meta {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--ink-secondary);
+      text-align: right;
+      line-height: 1.45;
+    }
+
+    .doc-meta strong {
+      color: var(--ink-primary);
+    }
+
+    /* Seções de Conteúdo */
+    .doc-section {
+      margin-bottom: 2rem;
+    }
+
+    .doc-section-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.4rem;
+    }
+
+    .doc-section-title span.num {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+    }
+
+    /* Grid de Referências */
+    .refs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .ref-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ref-header {
+      margin-bottom: 0.75rem;
+    }
+
+    .ref-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--ink-primary);
+      background: #e2e8f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.4rem;
+    }
+
+    .ref-name {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+
+    .ref-url {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #0284c7;
+      word-break: break-all;
+      margin-bottom: 0.75rem;
+      text-decoration: underline;
+    }
+
+    .ref-desc {
+      font-size: 0.82rem;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .ref-list-title {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .ref-elements-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: var(--ink-primary);
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .ref-elements-list li {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .ref-elements-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--ink-muted);
+    }
+
+    /* Racional de Design (Tabela / Grid de Justificativas) */
+    .rationale-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.82rem;
+    }
+
+    .rationale-table th,
+    .rationale-table td {
+      border: 1px solid var(--border-color);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .rationale-table th {
+      background: var(--bg-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-secondary);
+    }
+
+    .rationale-table td strong {
+      font-family: var(--font-mono);
+      color: var(--ink-primary);
+    }
+
+    /* Síntese & Conclusão */
+    .synthesis-text {
+      font-size: 0.86rem;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+      margin-top: 0.75rem;
+    }
+
+    .doc-footer {
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+    }
+
+    /* --- REGRAS DE IMPRESSÃO / EXPORTAÇÃO PDF --- */
+    @media print {
+      body {
+        background: transparent;
+        padding: 0;
+      }
+      .print-actions-bar {
+        display: none !important;
+      }
+      .document-page {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+        min-height: auto;
+      }
+      @page {
+        margin: 1.5cm;
+        size: A4 portrait;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .refs-grid {
+        grid-template-columns: 1fr;
+      }
+      .document-page {
+        padding: 2rem 1.5rem;
+      }
+      .doc-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .doc-meta {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Ações na Tela -->
+  <div class="print-actions-bar">
+    <a href="index.html" class="btn-back">
+      ← Voltar ao Portfólio
+    </a>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Exportar para PDF / Imprimir
+    </button>
+  </div>
+
+  <!-- Folha Principal do Documento -->
+  <article class="document-page">
+    
+    <!-- Cabeçalho -->
+    <header class="doc-header">
+      <div>
+        <div class="doc-category-tag">Documento de Design & Metodologia</div>
+        <h1 class="doc-title">Referências Visuais do Portfólio</h1>
+      </div>
+      <div class="doc-meta">
+        <div>Autor: <strong>Pedro Henrique Correa Rovere</strong></div>
+        <div>Área: <strong>Tecnologia & Desenvolvimento de Software</strong></div>
+        <div>Ano Letivo: <strong>2026</strong></div>
+      </div>
+    </header>
+
+    <!-- Seção 1: As 3 Referências Visuais -->
+    <section class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="num">01 /</span> Análise das Referências Selecionadas
+      </h2>
+      
+      <div class="refs-grid">
+        
+        <!-- Referência 1: PEAR -->
+        <div class="ref-card">
+          <div class="ref-header">
+            <span class="ref-badge">Referência 01</span>
+            <h3 class="ref-name">PEAR</h3>
+            <a href="https://pear.no/?ref=siteinspire" target="_blank" class="ref-url">pear.no</a>
+          </div>
+          <p class="ref-desc">
+            Estúdio norueguês com layout editorial sofisticado, proporções generosas e navegação estruturada por linhas finas.
+          </p>
+          <div class="ref-list-title">Elementos Aproveitados:</div>
+          <ul class="ref-elements-list">
+            <li>Tipografia monumental limpa (Grotesk);</li>
+            <li>Layout arejado com espaçamentos milimétricos;</li>
+            <li>Linhas estruturais sutis (hairlines de 1px);</li>
+            <li>Indexação numérica editorial <code>[ 01 ]</code>, <code>[ 02 ]</code>.</li>
+          </ul>
+        </div>
+
+        <!-- Referência 2: NIKE AFTER DARK TOUR -->
+        <div class="ref-card">
+          <div class="ref-header">
+            <span class="ref-badge">Referência 02</span>
+            <h3 class="ref-name">Nike After Dark</h3>
+            <a href="https://www.afterdarktour.nike.com/en/la" target="_blank" class="ref-url">afterdarktour.nike.com</a>
+          </div>
+          <p class="ref-desc">
+            Experiência interativa noturna com altíssimo impacto visual, iluminação em tons néon e sensação contínua de movimento.
+          </p>
+          <div class="ref-list-title">Elementos Aproveitados:</div>
+          <ul class="ref-elements-list">
+            <li>Tema escuro imersivo em tons de obsidiana;</li>
+            <li>Destaques vibrantes em verde-lima / volt (<code>#d4ff00</code>);</li>
+            <li>Ticker horizontal cinético (marquee ticker contínuo);</li>
+            <li>Cursor spotlight interativo e luz de fundo ambiente.</li>
+          </ul>
+        </div>
+
+        <!-- Referência 3: RETINAA -->
+        <div class="ref-card">
+          <div class="ref-header">
+            <span class="ref-badge">Referência 03</span>
+            <h3 class="ref-name">RETINAA</h3>
+            <a href="https://retinaa.ch/?ref=siteinspire" target="_blank" class="ref-url">retinaa.ch</a>
+          </div>
+          <p class="ref-desc">
+            Agência criativa suíça célebre pela curadoria e apresentação de projetos com imagens amplas e elegância arquitetônica.
+          </p>
+          <div class="ref-list-title">Elementos Aproveitados:</div>
+          <ul class="ref-elements-list">
+            <li>Galeria de projetos em cartões de grande proporção;</li>
+            <li>Zoom suave com desfoque e foco no hover dos projetos;</li>
+            <li>Visualização detalhada em modal modal/case study;</li>
+            <li>Minimalismo com identidade forte sem sobrecarga visual.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção 2: Justificativa das Escolhas de Design -->
+    <section class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="num">02 /</span> Justificativa das Decisões de Projeto
+      </h2>
+
+      <table class="rationale-table">
+        <thead>
+          <tr>
+            <th style="width: 22%;">Pilar</th>
+            <th style="width: 28%;">Escolha Técnica</th>
+            <th>Justificativa & Influência no Resultado Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Paleta de Cores</strong></td>
+            <td>
+              Obsidiana (<code>#0a0b0e</code>), Titânio (<code>#f5f6fa</code>) e Acento Volt / Lima (<code>#d4ff00</code>).
+            </td>
+            <td>
+              Combina a sobriedade tecnológica do <em>Nike After Dark</em> com a legibilidade clássica do <em>Pear</em>. O verde-lima fornece contraste máximo (WCAG AAA) sobre fundo escuro e transmite frescor e inovação, alternando perfeitamente para o modo claro.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Tipografia</strong></td>
+            <td>
+              <em>Syne</em> (Títulos), <em>Plus Jakarta Sans</em> (Corpo) e <em>JetBrains Mono</em> (Metadados).
+            </td>
+            <td>
+              A <em>Syne</em> carrega a expressividade geométrica arrojada das referências de moda e arte; a <em>Plus Jakarta Sans</em> assegura clareza de leitura no corpo do texto; e a <em>JetBrains Mono</em> traduz a identidade técnica e rigorosa da engenharia de software.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Layout & Espaçamento</strong></td>
+            <td>
+              Grid editorial assimétrico com bordas estruturais de 1px e respiro generoso.
+            </td>
+            <td>
+              Evita a rigidez dos templates comuns de IA, adotando o equilíbrio visual do <em>Retinaa</em> e do <em>Pear</em>. A hierarquia conduz o olhar naturalmente da introdução para as habilidades, projetos e contato.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Animações & Dinâmica</strong></td>
+            <td>
+              IntersectionObserver, Marquee 60fps, spotlight suave e modais com backdrop blur.
+            </td>
+            <td>
+              Inspirado na sensação de movimento do <em>Nike After Dark</em>, sem sobrecarregar a CPU. Todas as animações respeitam a diretiva <code>prefers-reduced-motion</code> para garantir total acessibilidade.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Seção 3: Conclusão & Síntese -->
+    <section class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="num">03 /</span> Síntese Metodológica
+      </h2>
+      <p class="synthesis-text">
+        O projeto atinge seu objetivo ao fundir três linguagens distintas em um produto coeso: a <strong>disciplina tipográfica e clareza estrutural do Pear</strong>, a <strong>energia cinética e impacto de iluminação do Nike After Dark Tour</strong>, e a <strong>sofisticação de curadoria e valorização de portfólio da Retinaa</strong>. O resultado não emula cópias literais, mas constrói uma identidade digital proprietária, profissional e autêntica para Pedro Henrique Correa Rovere, posicionando-o como um estudante dedicado à vanguarda da tecnologia e do design web.
+      </p>
+    </section>
+
+    <!-- Rodapé da Página -->
+    <footer class="doc-footer">
+      <div>Portfólio de Pedro Henrique Correa Rovere</div>
+      <div>Documento pronto para avaliação e impressão em PDF</div>
+      <div>Página 1 de 1</div>
+    </footer>
+
+  </article>
+
+</body>
+</html>

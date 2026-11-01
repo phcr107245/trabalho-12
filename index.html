@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Meta Tags -->
+  <title>Pedro Henrique Correa Rovere — Portfólio de Tecnologia & Desenvolvimento</title>
+  <meta name="description" content="Portfólio de Pedro Henrique Correa Rovere, estudante de tecnologia e desenvolvimento de software. Projetos modernos, interfaces inovadoras e código limpo.">
+  <meta name="author" content="Pedro Henrique Correa Rovere">
+  <meta name="keywords" content="Pedro Rovere, Desenvolvedor Front-end, Tecnologia, Programação, Portfólio, JavaScript, CSS, HTML5, Software">
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pedro Henrique Correa Rovere — Portfólio">
+  <meta property="og:description" content="Estudante de tecnologia e desenvolvimento focado em criar experiências digitais de alto impacto visual e arquitetura limpa.">
+  
+  <!-- Favicon SVG Moderno -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0b0e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23d4ff00'/%3E%3C/svg%3E">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Seguidor de Cursor (Efeito sutil tipo Nike After Dark) -->
+  <div class="ambient-spotlight" aria-hidden="true"></div>
+
+  <!-- Barra de Progresso de Rolagem Superior -->
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       1. CABEÇALHO & NAVEGAÇÃO FIXA (PEAR & NIKE COMBINED)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      
+      <!-- Logotipo / Identidade -->
+      <a href="#inicio" class="brand-logo" aria-label="Pedro Henrique Rovere - Página Inicial">
+        <span class="brand-dot"></span>
+        <span class="brand-text">PEDRO ROVERE</span>
+        <span class="brand-status-tag">[DISPONÍVEL]</span>
+      </a>
+
+      <!-- Menu de Navegação -->
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <ul class="nav-menu" id="nav-menu">
+          <li>
+            <a href="#inicio" class="nav-link active">
+              <span class="nav-num">01.</span> Início
+            </a>
+          </li>
+          <li>
+            <a href="#sobre" class="nav-link">
+              <span class="nav-num">02.</span> Sobre
+            </a>
+          </li>
+          <li>
+            <a href="#projetos" class="nav-link">
+              <span class="nav-num">03.</span> Projetos
+            </a>
+          </li>
+          <li>
+            <a href="#contato" class="nav-link">
+              <span class="nav-num">04.</span> Contato
+            </a>
+          </li>
+          <!-- Botão Fale Comigo para telas móveis -->
+          <li class="mobile-only-cta" style="margin-top: 1rem;">
+            <a href="#contato" class="btn btn-primary btn-sm">Fale Comigo</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Ações do Cabeçalho: Alternador de Tema e Menu Mobile -->
+      <div class="nav-actions">
+        <!-- Botão de Alternar Modo Claro / Escuro -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Alternar Modo de Cor" title="Alternar tema">
+          <!-- Ícone inserido dinamicamente via JS -->
+        </button>
+
+        <!-- CTA Rápido Desktop -->
+        <a href="#contato" class="btn btn-outline btn-sm desktop-only">Fale Comigo</a>
+
+        <!-- Botão Hambúrguer Mobile -->
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Abrir Menu de Navegação">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         2. INÍCIO (HERO SECTION) — ALTO IMPACTO, TIPOGRAFIA MONUMENTAL (PEAR & NIKE)
+         ========================================================================== -->
+    <section id="inicio" class="hero-section">
+      <!-- Grid de Fundo Sutil (Estilo Suíço / Pear) -->
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        
+        <!-- Barra de Metadados Superior -->
+        <div class="hero-meta-bar reveal-element">
+          <div class="hero-status-pill">
+            <span class="status-ping"></span>
+            <span>ESTUDANTE DE TECNOLOGIA & DESENVOLVIMENTO</span>
+          </div>
+          <div class="hero-live-clock" id="live-time-display">
+            SÃO PAULO, BR · 00:00:00 (GMT-3)
+          </div>
+        </div>
+
+        <!-- Grupo de Título Principal com Tipografia Monumental -->
+        <div class="hero-title-group">
+          <p class="hero-greeting reveal-element reveal-delay-1">// Olá, meu nome é</p>
+          
+          <h1 class="hero-main-name">
+            <span class="name-line">
+              <span class="animate-hero-line">PEDRO HENRIQUE</span>
+            </span>
+            <span class="name-line">
+              <span class="animate-hero-line delay-1 outline-text">CORREA ROVERE</span>
+            </span>
+          </h1>
+        </div>
+
+        <!-- Grid de Descrição & Ação -->
+        <div class="hero-body-grid">
+          <div class="hero-intro-text reveal-element reveal-delay-2">
+            <!-- Frase que representa identidade na tecnologia -->
+            <p class="hero-statement">
+              Transformando lógica em <span class="highlight">experiências digitais</span> memoráveis, com código limpo e arquitetura visual refinada.
+            </p>
+            
+            <!-- Descrição profissional de estudante -->
+            <p class="hero-student-desc">
+              Sou estudante na área de tecnologia e desenvolvimento de software, dedicado a aprender profundamente os fundamentos da computação, engenharia web moderna e design de interfaces interativas.
+            </p>
+
+            <!-- Botões de Ação -->
+            <div class="hero-actions">
+              <a href="#projetos" class="btn btn-primary">
+                <span>Conhecer Projetos</span>
+                <span class="btn-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                </span>
+              </a>
+
+              <a href="#sobre" class="btn btn-outline">
+                <span>Sobre Minha Jornada</span>
+                <span class="btn-icon">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card de Especificações Rápidas (Aesthetic Editorial) -->
+          <div class="hero-spec-card reveal-element reveal-delay-3">
+            <div class="spec-item">
+              <span class="spec-label">Foco Atual</span>
+              <span class="spec-value">Engenharia Web & Front-end</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Stack Base</span>
+              <span class="spec-value">HTML5 / CSS3 / JavaScript</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Disponibilidade</span>
+              <span class="spec-value" style="color: var(--accent-primary);">Estágio / Projetos</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Localização</span>
+              <span class="spec-value">Brasil (Remoto / Presencial)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. TICKER CINÉTICO (NIKE AFTER DARK TOUR VIBE)
+         ========================================================================== -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-content">
+        <span class="marquee-item">DESENVOLVIMENTO WEB <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">JAVASCRIPT MODERNO <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">CÓDIGO LIMPO & ARQUITETURA <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">INTERFACES RESPONSIVAS <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">UI / UX ENGINEERING <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">DESIGN EDITORIAL SUÍÇO <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">DESENVOLVIMENTO WEB <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">JAVASCRIPT MODERNO <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">CÓDIGO LIMPO & ARQUITETURA <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">INTERFACES RESPONSIVAS <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">UI / UX ENGINEERING <span class="marquee-sep">✦</span></span>
+        <span class="marquee-item">DESIGN EDITORIAL SUÍÇO <span class="marquee-sep">✦</span></span>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         4. SOBRE MIM (APRESENTAÇÃO, INTERESSES E HABILIDADES EDITÁVEIS)
+         ========================================================================== -->
+    <section id="sobre" class="section about-section">
+      <div class="container">
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="section-header reveal-element">
+          <span class="section-tag">[ 02 / SOBRE MIM ]</span>
+          <h2 class="section-title">A paixão por criar e resolver problemas através do código.</h2>
+          <p class="section-subtitle">
+            Conheça minha trajetória como estudante de tecnologia, meus interesses no ecossistema de software e as ferramentas que domino.
+          </p>
+        </div>
+
+        <!-- Grid Assimétrico Sobre Mim -->
+        <div class="about-grid">
+          
+          <!-- Coluna Esquerda: Narrativa & Filosofia de Desenvolvimento -->
+          <div class="about-narrative reveal-element reveal-delay-1">
+            <p class="lead-paragraph">
+              Acredito que o bom código é aquele que alia rigor lógico a uma experiência de usuário intuitiva e agradável.
+            </p>
+
+            <p class="body-paragraph">
+              Minha trajetória na tecnologia começou com uma curiosidade incessante por compreender o funcionamento interno da internet e das aplicações digitais. Desde as primeiras linhas de código, percebi que a programação é uma ponte poderosa entre a imaginação criativa e soluções tangíveis do mundo real.
+            </p>
+
+            <p class="body-paragraph">
+              Como estudante de tecnologia e desenvolvimento, dedico minha rotina a construir uma base sólida em algoritmos, arquitetura de software, padrões modernos de interface e boas práticas de desenvolvimento como acessibilidade (a11y) e performance.
+            </p>
+
+            <!-- Box informativo com instrução para edição pessoal -->
+            <div class="editable-hint-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>
+                <strong>Espaço Editável:</strong> Pedro, você pode personalizar este texto com sua instituição de ensino, cursos em andamento ou área de especialização de sua preferência no arquivo <code>index.html</code>.
+              </span>
+            </div>
+
+            <!-- Grid de Pilares / Estatísticas de Dedicação -->
+            <div class="about-stats-grid">
+              <div class="stat-card">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Dedicação ao Aprendizado Contínuo</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">+500h</div>
+                <div class="stat-label">Prática, Estudos & Projetos</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">CLEAN</div>
+                <div class="stat-label">Código Limpo & Semântico</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">MOBILE</div>
+                <div class="stat-label">Design 100% Responsivo</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Habilidades e Tecnologias (Prontas para Edição) -->
+          <div class="skills-container reveal-element reveal-delay-2">
+            
+            <!-- Categoria 1: Front-end Core -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">Front-end & Interfaces</h3>
+              <div class="skill-tags">
+                <span class="skill-pill">HTML5 Semântico</span>
+                <span class="skill-pill">CSS3 Avançado (Grid & Flex)</span>
+                <span class="skill-pill">JavaScript ES6+ Moderno</span>
+                <span class="skill-pill">Design Responsivo</span>
+                <span class="skill-pill">Manipulação de DOM</span>
+                <span class="skill-pill">Animações CSS & Canvas</span>
+              </div>
+            </div>
+
+            <!-- Categoria 2: Ferramentas & Ecossistema -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">Ferramentas & Fluxo de Trabalho</h3>
+              <div class="skill-tags">
+                <span class="skill-pill">Git & GitHub</span>
+                <span class="skill-pill">VS Code</span>
+                <span class="skill-pill">Figma (Inspeção de UI)</span>
+                <span class="skill-pill">Consumo de APIs REST</span>
+                <span class="skill-pill">DevTools & Debugging</span>
+                <span class="skill-pill">Estrutura de Pastas Modular</span>
+              </div>
+            </div>
+
+            <!-- Categoria 3: Fundamentos & Metodologias -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">Práticas & Fundamentos</h3>
+              <div class="skill-tags">
+                <span class="skill-pill">Clean Code</span>
+                <span class="skill-pill">Acessibilidade Web (WCAG)</span>
+                <span class="skill-pill">Otimização de Performance</span>
+                <span class="skill-pill">Resolução de Problemas Lógicos</span>
+                <span class="skill-pill">Comunicação Técnica</span>
+              </div>
+            </div>
+
+            <!-- Box: Em Foco / Atualmente Estudando -->
+            <div class="learning-box">
+              <div class="learning-badge">
+                <span class="status-ping" style="background: var(--accent-primary); box-shadow: 0 0 10px var(--accent-primary);"></span>
+                Atualmente Aprofundando
+              </div>
+              <p class="learning-text">
+                Foco no domínio avançado de TypeScript, ecossistema React/Next.js e técnicas de renderização orientadas a performance.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. PROJETOS (GALERIA VISUAL ESTILO RETINAA + PEAR)
+         ========================================================================== -->
+    <section id="projetos" class="section projects-section">
+      <div class="container">
+        
+        <!-- Cabeçalho da Galeria -->
+        <div class="section-header row reveal-element">
+          <div>
+            <span class="section-tag">[ 03 / PROJETOS SELECIONADOS ]</span>
+            <h2 class="section-title">Galeria de trabalhos & estudos práticos.</h2>
+            <p class="section-subtitle">
+              Uma seleção de projetos com foco em engenharia de interface, clareza funcional e excelência estética.
+            </p>
+          </div>
+
+          <!-- Filtro por Categoria -->
+          <div class="projects-filter-bar">
+            <button class="filter-btn active" data-filter="all">Todos (04)</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="ui">UI & Design Systems</button>
+            <button class="filter-btn" data-filter="tools">DevTools</button>
+          </div>
+        </div>
+
+        <!-- Grid de Projetos -->
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- PROJETO 01 -->
+          <article class="project-card reveal-scale" data-category="web">
+            <div class="project-media">
+              <img src="assets/images/project-1.jpg" alt="Prévia do projeto Veridian Capital Insights" class="project-image" loading="lazy">
+              <span class="project-badge-num">[ 01 ]</span>
+              <span class="project-category-tag">Web App / Fintech</span>
+            </div>
+            <div class="project-details">
+              <h3 class="project-name">Veridian Capital Insights</h3>
+              <p class="project-description">
+                Dashboard analítico de performance e alocação de ativos com visualização de dados em tempo real e interface escura de alta fidelidade.
+              </p>
+              <div class="project-stack">
+                <span class="project-stack-item">JavaScript ES6+</span>
+                <span class="project-stack-item">CSS Grid</span>
+                <span class="project-stack-item">Data Viz</span>
+                <span class="project-stack-item">Dark UI</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-view-btn btn-open-modal" data-project-id="veridian" aria-label="Ver detalhes de Veridian Capital">
+                  <span>Ver Detalhes</span>
+                  <span>→</span>
+                </button>
+                <!-- Link Editável de Repositório -->
+                <a href="https://github.com/pedro-rovere/veridian-capital" target="_blank" rel="noopener noreferrer" class="project-github-link" title="Repositório no GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 02 -->
+          <article class="project-card reveal-scale reveal-delay-1" data-category="ui">
+            <div class="project-media">
+              <img src="assets/images/project-2.jpg" alt="Prévia do projeto Aura Modern Editorial UI" class="project-image" loading="lazy">
+              <span class="project-badge-num">[ 02 ]</span>
+              <span class="project-category-tag">Design System / UI</span>
+            </div>
+            <div class="project-details">
+              <h3 class="project-name">Aura Modern Editorial UI</h3>
+              <p class="project-description">
+                Design system experimental e biblioteca de componentes baseada no estilo editorial suíço, glassmorphism e tipografia expressiva.
+              </p>
+              <div class="project-stack">
+                <span class="project-stack-item">Vanilla CSS</span>
+                <span class="project-stack-item">Design Tokens</span>
+                <span class="project-stack-item">Glassmorphism</span>
+                <span class="project-stack-item">Microinterações</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-view-btn btn-open-modal" data-project-id="aura" aria-label="Ver detalhes de Aura Modern Editorial">
+                  <span>Ver Detalhes</span>
+                  <span>→</span>
+                </button>
+                <a href="https://github.com/pedro-rovere/aura-ui" target="_blank" rel="noopener noreferrer" class="project-github-link" title="Repositório no GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 03 -->
+          <article class="project-card reveal-scale reveal-delay-2" data-category="tools">
+            <div class="project-media">
+              <img src="assets/images/project-3.jpg" alt="Prévia do projeto Hyperdrive Dev Platform" class="project-image" loading="lazy">
+              <span class="project-badge-num">[ 03 ]</span>
+              <span class="project-category-tag">DevTools / Sistemas</span>
+            </div>
+            <div class="project-details">
+              <h3 class="project-name">Hyperdrive Dev Platform</h3>
+              <p class="project-description">
+                Painel de orquestração para desenvolvedores com monitor de latência de endpoints, terminal integrado e métricas de servidores.
+              </p>
+              <div class="project-stack">
+                <span class="project-stack-item">DevTools</span>
+                <span class="project-stack-item">REST APIs</span>
+                <span class="project-stack-item">Terminal UI</span>
+                <span class="project-stack-item">Performance</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-view-btn btn-open-modal" data-project-id="hyperdrive" aria-label="Ver detalhes de Hyperdrive">
+                  <span>Ver Detalhes</span>
+                  <span>→</span>
+                </button>
+                <a href="https://github.com/pedro-rovere/hyperdrive-core" target="_blank" rel="noopener noreferrer" class="project-github-link" title="Repositório no GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 04 -->
+          <article class="project-card reveal-scale reveal-delay-3" data-category="web">
+            <div class="project-media">
+              <img src="assets/images/project-4.jpg" alt="Prévia do projeto Audiophiliac Audio Experience" class="project-image" loading="lazy">
+              <span class="project-badge-num">[ 04 ]</span>
+              <span class="project-category-tag">E-Commerce / Concept</span>
+            </div>
+            <div class="project-details">
+              <h3 class="project-name">Audiophiliac Experience</h3>
+              <p class="project-description">
+                Experiência de e-commerce conceitual para equipamentos de áudio de alta precisão, inspirada na estética minimalista e cinética.
+              </p>
+              <div class="project-stack">
+                <span class="project-stack-item">E-Commerce UX</span>
+                <span class="project-stack-item">CSS Animations</span>
+                <span class="project-stack-item">Responsive Design</span>
+                <span class="project-stack-item">Motion Web</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-view-btn btn-open-modal" data-project-id="audiophiliac" aria-label="Ver detalhes de Audiophiliac">
+                  <span>Ver Detalhes</span>
+                  <span>→</span>
+                </button>
+                <a href="https://github.com/pedro-rovere/audiophiliac-store" target="_blank" rel="noopener noreferrer" class="project-github-link" title="Repositório no GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Banner com Instrução para Adicionar Projetos Reais -->
+        <div class="projects-edit-notice reveal-element">
+          <p class="notice-text">
+            <strong>Personalização Simplificada:</strong> Para adicionar novos projetos ou trocar links para repositórios reais, basta editar o arquivo <code>js/projects.js</code> e as tags deste documento.
+          </p>
+          <a href="#contato" class="btn btn-outline btn-sm">Propor um Projeto</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. CONTATO (FORMULÁRIO FUNCIONAL, VALIDAÇÃO, REDES EDITÁVEIS)
+         ========================================================================== -->
+    <section id="contato" class="section contact-section">
+      <div class="container">
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="section-header reveal-element">
+          <span class="section-tag">[ 04 / CONTATO ]</span>
+          <h2 class="section-title">Vamos construir algo extraordinário juntos?</h2>
+          <p class="section-subtitle">
+            Estou disponível para oportunidades de estágio, colaborações em projetos de tecnologia e conexões profissionais.
+          </p>
+        </div>
+
+        <!-- Grid de Contato -->
+        <div class="contact-grid">
+          
+          <!-- Coluna Esquerda: Canais Diretos & Redes Sociais -->
+          <div class="contact-info-col reveal-element reveal-delay-1">
+            <p class="contact-callout">
+              Seja para tirar dúvidas sobre meus estudos, discutir oportunidades de estágio ou apenas trocar ideias sobre o futuro do desenvolvimento web, será um prazer conversar.
+            </p>
+
+            <div class="contact-channels">
+              <!-- Item E-mail com Botão Copiar -->
+              <div class="contact-card-item">
+                <div class="channel-meta">
+                  <span class="channel-label">E-mail Direto (Editável)</span>
+                  <span class="channel-value" id="email-address-text">pedro.rovere@email.com</span>
+                </div>
+                <button type="button" class="copy-btn" id="copy-email-btn" title="Copiar endereço de e-mail">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copiar</span>
+                </button>
+              </div>
+
+              <!-- Item Localização -->
+              <div class="contact-card-item">
+                <div class="channel-meta">
+                  <span class="channel-label">Localização</span>
+                  <span class="channel-value">São Paulo — SP, Brasil (Disponível Remoto / Híbrido)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Redes Sociais com Links Editáveis -->
+            <div>
+              <span class="channel-label" style="display: block; margin-bottom: 0.75rem;">Conecte-se comigo:</span>
+              <div class="social-links-list">
+                <!-- GitHub Editável -->
+                <a href="https://github.com/pedro-rovere" target="_blank" rel="noopener noreferrer" class="social-pill" title="Acesse o perfil de Pedro no GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+
+                <!-- LinkedIn Editável -->
+                <a href="https://linkedin.com/in/pedro-rovere" target="_blank" rel="noopener noreferrer" class="social-pill" title="Acesse o perfil de Pedro no LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Coluna Direita: Formulário de Contato com Validação em Tempo Real -->
+          <div class="contact-form-wrapper reveal-element reveal-delay-2">
+            <!-- 
+              COMO ATIVAR RECEBIMENTO REAL VIA FORMSPREE:
+              Cole sua URL gerada no site formspree.io no atributo action abaixo:
+              action="https://formspree.io/f/SEU_CODIGO_AQUI"
+              Caso contrário, o script aciona a rota funcional automática via mailto!
+            -->
+            <form id="contact-form" class="contact-form" action="" method="POST" novalidate>
+              
+              <!-- Campo Nome -->
+              <div class="form-group">
+                <label for="name" class="form-label">
+                  <span>Nome Completo *</span>
+                </label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome ou empresa" required autocomplete="name">
+                <span class="field-error-msg" id="name-error"></span>
+              </div>
+
+              <!-- Campo E-mail -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  <span>Seu E-mail *</span>
+                </label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="seu.email@exemplo.com" required autocomplete="email">
+                <span class="field-error-msg" id="email-error"></span>
+              </div>
+
+              <!-- Campo Assunto -->
+              <div class="form-group">
+                <label for="subject" class="form-label">
+                  <span>Assunto *</span>
+                </label>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Oportunidade de estágio / Parceria / Projeto" required>
+                <span class="field-error-msg" id="subject-error"></span>
+              </div>
+
+              <!-- Campo Mensagem -->
+              <div class="form-group">
+                <label for="message" class="form-label">
+                  <span>Mensagem *</span>
+                  <span class="char-counter" id="char-counter">0 / 500</span>
+                </label>
+                <textarea id="message" name="message" class="form-control" placeholder="Conte brevemente sobre sua ideia, projeto ou vaga..." required maxlength="500"></textarea>
+                <span class="field-error-msg" id="message-error"></span>
+              </div>
+
+              <!-- Botão de Envio -->
+              <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width: 100%;">
+                <span>Enviar Mensagem</span>
+                <span class="btn-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </span>
+              </button>
+
+              <p class="form-integration-note">
+                🔒 Solução funcional: Validação completa de campos no navegador com disparo instantâneo ou integração com Formspree.
+              </p>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       7. RODAPÉ (FOOTER COM WATERMARK & NAVEGAÇÃO)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Watermark Monumental de Fundo -->
+      <div class="footer-watermark" aria-hidden="true">
+        PEDRO ROVERE
+      </div>
+
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <h3 class="footer-brand-name">PEDRO HENRIQUE CORREA ROVERE</h3>
+          <p class="footer-brand-desc">
+            Estudante de tecnologia e desenvolvimento de software focado em front-end moderno, arquitetura limpa e design de sistemas digitais.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <!-- Coluna 1: Navegação -->
+          <div>
+            <h4 class="footer-col-title">Navegação</h4>
+            <ul class="footer-links-list">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">Sobre Mim</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 2: Conexões -->
+          <div>
+            <h4 class="footer-col-title">Conexões</h4>
+            <ul class="footer-links-list">
+              <li><a href="https://github.com/pedro-rovere" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://linkedin.com/in/pedro-rovere" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="mailto:pedro.rovere@email.com">E-mail</a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 3: Atividade Acadêmica -->
+          <div>
+            <h4 class="footer-col-title">Documento</h4>
+            <ul class="footer-links-list">
+              <li><a href="referencias-visuais.html" target="_blank">Referências Visuais (PDF)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Pedro Henrique Correa Rovere. Todos os direitos reservados.
+        </div>
+        <div>
+          Desenvolvido com HTML5, CSS3 & JavaScript puro · Inspirado por Pear, Nike After Dark & Retinaa.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       8. MODAL INTERATIVO DE DETALHES DE PROJETOS
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar janela de detalhes">✕</button>
+      
+      <div class="modal-media">
+        <img id="modal-image" src="" alt="Imagem do Projeto">
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-header-meta">
+          <span id="modal-index">[ 01 ]</span>
+          <span>·</span>
+          <span id="modal-category">Categoria</span>
+        </div>
+
+        <h3 class="modal-project-title" id="modal-title">Título do Projeto</h3>
+        <p class="modal-project-desc" id="modal-desc">Descrição completa do projeto.</p>
+
+        <div class="modal-info-grid">
+          <div class="modal-info-item">
+            <span class="label">Minha Atuação</span>
+            <span class="val" id="modal-role">Front-end & UI</span>
+          </div>
+          <div class="modal-info-item">
+            <span class="label">Status</span>
+            <span class="val" id="modal-status">Concluído</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">Tecnologias Empregadas</h4>
+          <div class="project-stack" id="modal-tags">
+            <!-- Tags inseridas via JS -->
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">Destaques de Implementação</h4>
+          <ul id="modal-features" style="padding-left: 1.25rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+            <!-- Itens inseridos via JS -->
+          </ul>
+        </div>
+
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modal-live-btn">
+            <span>Visualizar Demonstração</span>
+            <span>↗</span>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="modal-github-btn">
+            <span>Ver no GitHub</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão Flutuante Voltar ao Topo -->
+  <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Voltar ao início da página" title="Voltar ao topo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Scripts JavaScript -->
+  <script src="js/projects.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
